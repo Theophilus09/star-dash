@@ -1,0 +1,18 @@
+{
+  "name": "star-dash-game",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy:local": "npm run upload:html:local && npm run upload:platform:local && npm run upload:json:local",
+    "upload:html:local": "npx wrangler r2 object put startng-games/star-dash/index.html --file index.html --local -c ../startng-fe/worker/wrangler.toml",
+    "upload:platform:local": "npx wrangler r2 object put startng-games/star-dash/src/platform.js --file src/platform.js --local -c ../startng-fe/worker/wrangler.toml",
+    "upload:json:local": "npx wrangler r2 object put startng-games/star-dash/startng.json --file startng.json --local -c ../startng-fe/worker/wrangler.toml",
+    "deploy:remote": "npm run upload:html:remote && npm run upload:platform:remote && npm run upload:json:remote",
+    "upload:html:remote": "npx wrangler r2 object put startng-games/star-dash/index.html --file index.html --remote -c ../startng-fe/worker/wrangler.toml",
+    "upload:platform:remote": "npx wrangler r2 object put startng-games/star-dash/src/platform.js --file src/platform.js --remote -c ../startng-fe/worker/wrangler.toml",
+    "upload:json:remote": "npx wrangler r2 object put startng-games/star-dash/startng.json --file startng.json --remote -c ../startng-fe/worker/wrangler.toml"
+  },
+  "devDependencies": {
+    "@cloudflare/workerd-windows-64": "^1.20261016.1",
+    "wrangler": "^4.145.0"
+  }
+}

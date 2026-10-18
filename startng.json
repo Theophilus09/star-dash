@@ -1,0 +1,11 @@
+{
+    "name": "Star Dash 3D",
+    "slug": "star-dash",
+    "stats": [
+        {
+            "key": "score",
+            "label": "Score",
+            "sort": "desc"
+        }
+    ]
+}
